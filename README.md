@@ -12,5 +12,9 @@ https://msdn.microsoft.com/en-us/library/system.net.security.sslstream(v=vs.110)
 Userful terminal commands:
 
 start handshaking with the server: openssl s_client -tls1 -connect 127.0.0.1:5678 -msg
+
+
 creates self signed certificate: openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365
+
+
 Convert PEM & Private Key to PFX/P12: openssl pkcs12 -export -out cert.pfx -inkey key.pem -in cert.pem
